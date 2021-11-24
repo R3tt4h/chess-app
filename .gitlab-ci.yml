@@ -6,4 +6,4 @@ image: debian:latest
 build:
   stage: stage1
   script:
-    - echo "Hello World"
+    - echo "Hello World !"
