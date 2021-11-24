@@ -1,7 +1,5 @@
 stages:
   - stage1
-  - stage2
-  - stage3
 
 image: debian:latest
 
