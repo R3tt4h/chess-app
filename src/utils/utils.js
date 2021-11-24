@@ -1,4 +1,4 @@
-import { collection, addDoc, doc, getDocs,getDoc, query, updateDoc } from '@firebase/firestore';
+import { collection, addDoc, doc, serverTimestamp, getDoc, updateDoc } from '@firebase/firestore';
 import db from "../firebase";
 
 
@@ -45,23 +45,24 @@ export const playerTurn = async (gameId) => {
         console.log("turn :", whoIsNext)
         console.log("gameId : ", gameId)
     } else {
-    const whoIsNext = true;
-    const payload = { whoIsNext };
-    await updateDoc(docRef, payload);
+        const whoIsNext = true;
+        const payload = { whoIsNext };
+        await updateDoc(docRef, payload);
 
-    console.log("turn :", whoIsNext)
-    console.log("gameId : ", gameId)
+        console.log("turn :", whoIsNext)
+        console.log("gameId : ", gameId)
     }
 }
 
 export const playerMove = async (gameId, move) => {
-    const docRef = doc(db, "games", gameId);
-    const payload = { from: move.from, to: move.to };
-    await updateDoc(docRef, payload);
+    const collectionRef = collection(db, `/games/${gameId}/moves`);
+    const payload = { from: move.from, to: move.to, promotion: move.promotion, timestamp: serverTimestamp() };
+    await addDoc(collectionRef, payload);
     // Ajouter a une liste
     // onChange Event
     
     }
+
 
 // Copier/Coller playerTurn + onSnapshot setBoard
 

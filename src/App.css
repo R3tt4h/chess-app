@@ -1,5 +1,206 @@
-.flex-center{
+/*---- All ----*/
+
+*{
+    text-decoration: none;
+}
+
+.center{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+/*---- Home.js ----*/
+
+.menu{
+    width: 50vw;
+    height: 60vh;
+    border: solid;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+}
+
+.menu h1{
+    font-size: 38px;
+}
+
+.selector{
+    display: flex;
+}
+
+.selector button{
+    border: none;
+    background-color: white;
+    width: 20vmax;
+    height: 3em;
+    font-size: 20px;
+}
+
+.selector button:hover{
+    color: grey;
+    cursor: pointer;
+    border-bottom: solid;
+    border-width: .1em;
+}
+
+.current_game_list{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 26vh;
+    overflow-y: scroll;
+    padding: 1em;
+    margin: 4vh 4vw 0 4vw;
+    border: solid;
+    border-width: .1em;
+}
+
+.current_game_list::-webkit-scrollbar { 
+    display: none; 
+}
+
+.current_game_list li{
+    display: flex;
+    height: 2em;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+    padding: 0.3em;
+    background-color: #f7f7f7;
+}
+
+.current_game_list button{
+    width: 6em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-width: 0.1em;
+    border-radius: 0.2em;
+}
+
+.current_game_list button:hover{
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.new_game_form{
+    margin-top: 10vh;
+    border: solid;
+    border-width: .1em;
+    padding: 1em;
+}
+
+.new_game_form input{
+    width: 20em;
+    height: 2em;
+}
+
+.new_game_form button{
+    height: 2em;
+    margin-left: 2vw;
+    background-color: white;
+    border-width: 0.1em;
+    border-radius: 0.2em;
+}
+
+.new_game_form button:hover{
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+
+/*---- Game.js ----*/
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#historic, #chat{
+    list-style: none;
+    width: 30vw;
+    height: 40vh;
+    overflow: scroll;
+    border: solid;
+    border-width: .1em;
+    padding: 1em;
+    margin: 2vh 0 4vh 4vw;
+
+}
+
+.game{
+    width: 80vw;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5em;
+    background-color: #fff;
+
+}
+
+.utilitary{
+    display: flex;
+    flex-direction: column;
+    margin: .5em 2em .5em 0;
+}
+
+.chessboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vh 0 0 4vw;
+}
+
+.selector_2{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 2vh 0 0 4vw;
+
+}
+
+.selector_2 button{
+    border: none;
+    background-color: white;
+    width: 10vmax;
+    height: 2em;
+    font-size: 20px;
+}
+
+.selector_2 button:hover{
+    color: grey;
+    cursor: pointer;
+    border-bottom: solid;
+    border-width: .1em;
 }
