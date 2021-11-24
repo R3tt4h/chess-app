@@ -7,3 +7,5 @@ build:
   stage: stage1
   script:
     - echo "Hello World !"
+    - npm install
+    - npm start

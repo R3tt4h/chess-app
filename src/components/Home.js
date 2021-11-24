@@ -4,7 +4,7 @@ import db from "../firebase";
 import { handleNewGame, handleJoinGame } from "../utils/utils";
 
 function Home() {
-    // test
+
     const [games, setGames] = useState([{name: "Loading...", id: "initial"}]);
 
     useEffect(
