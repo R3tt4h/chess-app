@@ -1,7 +1,7 @@
 stages:
   - stage1
 
-image: debian:latest
+image: node:latest
 
 build:
   stage: stage1
